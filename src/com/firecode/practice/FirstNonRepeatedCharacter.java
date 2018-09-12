@@ -43,38 +43,6 @@ public class FirstNonRepeatedCharacter {
 	}
 
 
-
-
-/*can be corrected.have to correct it
-public static Integer firstNonRepeatedInteger(int A[]) {
-
-		LinkedHashMap<Integer,Integer> map=new LinkedHashMap<>();
-		int x=0;
-
-		for(int i=0;i<A.length-1;i++)
-		{
-			int a=A[i];
-			if(!map.containsKey(a))
-			{
-				map.put(a,1);
-			}
-			else{
-				map.put(a,map.get(A[i])+1);
-			}
-		}
-
-		for(Map.Entry<Integer,Integer> e: map.entrySet())
-		{
-			if(e.getValue()==1)
-				x=e.getKey();
-			else x=0;
-		}
-
-		return x;
-
-	}*/
-
-
 	public static Integer firstNonRepeatedInteger(int A[]) {
 
 	Set<Integer> dupset=new HashSet<>();
