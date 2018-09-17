@@ -23,28 +23,41 @@ public class HashMapIteration {
         return oldName;
     }
 
-  /*  public void setOldName(ArrayList<String> oldName) {
-        this.oldName = oldName;
+    public void addOldName(String name) {
+        oldName.add(name);
     }
-*/
-    public void display() {
+
+  /* public void setOldName(ArrayList<String> oldName) {
+        this.oldName = oldName;
+    }*/
+
+/*    public void display() {
         oldName.add("buy1");
         oldName.add("buy2");
+
 
         //arraylist iteration
         for (String oldName :getOldName()) {
                 System.out.println(oldName);
         }
 
-         /* for (int counter = 0; counter < oldName.size(); counter++) {
+         *//* for (int counter = 0; counter < oldName.size(); counter++) {
             System.out.println(oldName.get(counter));
         }
-        */
-    }
+        *//*
+    }*/
 
         public static void main(String args[]){
             HashMapIteration u = new HashMapIteration();
-            u.display();
+           // u.display();
+
+            u.addOldName("str");
+            u.addOldName("str1");
+            u.addOldName("str2");
+
+            for (String oldName :u.getOldName()) {
+                System.out.println("olddddd nameeeee"+oldName);
+            }
 
 
             HashMap<String,HashMapIteration> map=new HashMap<>();
