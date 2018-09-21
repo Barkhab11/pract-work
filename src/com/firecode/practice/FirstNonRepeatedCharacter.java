@@ -26,7 +26,8 @@ public class FirstNonRepeatedCharacter {
 
 	public static Character firstNonRepeatedCharacter(String str) {
 
-		Set<Character> dupset=new HashSet<>();
+		//solution1
+	/*	Set<Character> dupset=new HashSet<>();
 		LinkedHashSet<Character> set=new LinkedHashSet<>();
 		for(int i=0;i<str.length();i++)
 		{
@@ -38,7 +39,35 @@ public class FirstNonRepeatedCharacter {
 		set.removeAll(dupset);
 		if(set.isEmpty())
 			return null;
-		else return set.iterator().next().charValue();
+		else return set.iterator().next().charValue();*/
+
+	//solution2
+		char ch[]=str.toCharArray();
+
+		int count=0;
+        char chh = '\0';
+
+		for(int i=0;i<str.length();i++)
+		{
+			for(int j=0;j<ch.length;j++)
+			{
+				if(str.charAt(i)==ch[j])
+					count++;
+			}
+           // System.out.println("count is  "+count+"str[i]  "+str.charAt(i));
+			if(count==1) {
+				chh = str.charAt(i);
+				break;
+			}
+			count=0;
+
+		}
+
+		if(chh!='\0')
+		return chh;
+		else return null;
+
+
 
 	}
 
@@ -67,9 +96,13 @@ public class FirstNonRepeatedCharacter {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.out.println(FirstNonRepeatedCharacter.firstNonRepeatedCharacter("aaadrfedr"));
-		int A[]= {1,1,1,4,5,6,7,7,6,4};
-		System.out.println(FirstNonRepeatedCharacter.firstNonRepeatedInteger(A));
+		System.out.println(FirstNonRepeatedCharacter.firstNonRepeatedCharacter("aaaa"));
+		//int A[]= {1,1,1,4,5,6,7,7,6,4};
+		//System.out.println(FirstNonRepeatedCharacter.firstNonRepeatedInteger(A));
+
+
+
+	}
 
 
 
@@ -82,4 +115,3 @@ public class FirstNonRepeatedCharacter {
 
 
 
-}

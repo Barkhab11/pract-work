@@ -1,4 +1,3 @@
-/*
 package com.firecode.practice;
 
 public class FindMiddleNode {
@@ -18,16 +17,19 @@ public class FindMiddleNode {
 
 
 
+
         Node current=head;
 
-      */
-/*  while (current.next != null) {
+
+/*
+ while (current.next != null) {
             System.out.println("head values:" + current.data + "  " + current.next);
             current=current.next;
-        }*//*
+        }
+*/
 
 
-       Node middle= FindMiddleNode.findMiddleNode(head);
+      Node middle= FindMiddleNode.findMiddleNode(head);
         System.out.println("middle data"+middle.data);
 
 
@@ -38,22 +40,22 @@ public class FindMiddleNode {
 
     public static Node findMiddleNode(Node head) {
 
-
-        if(head==nu)
-
-    int length=1;
+        int length=1;
         int i=0;
 
-
+        if(head==null) {
+            return null;
+        }
 
          Node current=head;
          while(current.next!=null)
          {
             length++;
             current=current.next;
-         }
-        // System.out.println(length);
 
+         }
+
+        System.out.println("lenght"+length);
         int arr[]=new int[length];
          current=head;
         int j=length;
@@ -62,15 +64,21 @@ public class FindMiddleNode {
         {
 
            arr[i]=current.data;
-           // System.out.println(arr[i]);
             current=current.next;
             i++;
             j--;
         }
 
         i=length/2;
+        int n=0;
 
-        int n=arr[i];
+    if(length%2==0) {
+        n = arr[i - 1];
+    }
+    else
+         n=arr[i];
+
+
         System.out.println(i+" "+n);
 
         current=head;
@@ -85,5 +93,31 @@ public class FindMiddleNode {
         return current;
 
     }
+
+
+
+/*    public static Node findMiddleNodeE(Node head) {
+
+      int length=0;
+      Node current=head;
+      Node middle=head;
+
+      while(current.next!=null)
+      {
+          length++;
+          if(length%2==0)
+          {
+              middle=middle.next;
+          }
+          current=current.next;
+      }
+ if(length%2==1)
+ {
+     middle=middle.next;
+     return middle;
+ }
+else return current;
+
+    }*/
 }
-*/
+

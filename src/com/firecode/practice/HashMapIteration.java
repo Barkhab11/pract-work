@@ -45,7 +45,26 @@ public class HashMapIteration {
             System.out.println(oldName.get(counter));
         }
         *//*
-    }*/
+    }
+            //set iteration
+        	Set set=new HashSet();
+		set.add("new");
+		set.add("old");
+
+
+		System.out.println("HashSet: " + set);
+
+		Iterator value = set.iterator();
+
+		// Displaying the values after iterating through the set
+		System.out.println("The iterator values are: ");
+		while (value.hasNext()) {
+			System.out.println(value.next());
+		}
+
+
+
+    */
 
         public static void main(String args[]){
             HashMapIteration u = new HashMapIteration();
