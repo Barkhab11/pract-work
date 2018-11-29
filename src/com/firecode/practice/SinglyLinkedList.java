@@ -1,6 +1,9 @@
 package com.firecode.practice;
 //program to find the middele node for singly linked list
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SinglyLinkedList {
 	private Node head;
  
@@ -63,7 +66,7 @@ public class SinglyLinkedList {
 	 
 	 public static void main(String args[]) {
 		 // Creating Singly linked list in Java of String type
-		 SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+	/*	 SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
 		 singlyLinkedList.insertFirst(1);
 		 System.out.println("head for 1 is:"+singlyLinkedList.head.data+ "and next is:"+singlyLinkedList.head.next);
 		 singlyLinkedList.insertFirst(2);
@@ -72,8 +75,26 @@ public class SinglyLinkedList {
 		 singlyLinkedList.insertFirst(4);
 		 singlyLinkedList.deleteFirst();
 		 singlyLinkedList.deleteFirst();
-		 singlyLinkedList.printLinkedList();
-		 
+		 singlyLinkedList.printLinkedList();*/
+
+
+		ArrayList<String> y=new ArrayList<String>();
+		y.add("hf");
+		y.add("dfd");
+		Stat s1=new Stat();
+		 s1.setX(y);
+		// System.out.println(Stat.x);
+		 List<Stat> st=new ArrayList<Stat>();
+		 st.add(s1);
+		/* for (int counter = 0; counter < st.size(); counter++) {
+			 System.out.println(st.get(counter).getX());
+		 }*/
+
+		 List<Stat> ste=new ArrayList<Stat>();
+		 Inter inter=new ListInter();
+		 inter.perform(st);
+
+
 	 }
 	 
 	 
